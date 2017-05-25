@@ -1,0 +1,13 @@
+CC=gcc
+CFLAGS=-g3 -Wall
+
+all: test_dict1
+
+test: all
+	./test_dict1
+
+test_dict: test_dict1.o dict1.o
+	$(CC) $(CFLAGS) -o $@ $^
+
+clean:
+	$(RM) test_dict1 *.o

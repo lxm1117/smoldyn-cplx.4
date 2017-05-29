@@ -17,6 +17,7 @@
 #include <utility>
 #include <iostream>
 #include <gsl/gsl_randist.h>
+#include <gsl/gsl_rng.h>
 
 #ifdef OPTION_NSV
   #include "nsvc.h"

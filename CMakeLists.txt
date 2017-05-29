@@ -454,8 +454,8 @@ endif(OPTION_NSV)
 ####### Targets ##########
 find_package(OpenMP)
 if (OPENMP_FOUND)
-    set (CMAKE_C_FLAGS "-g -Wall -L/usr/include/gsl -lgsl ${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS} $ENV{glib_CFLAGS} $ENV{glib_LIBS} -lstdc++ -lm")			#-lm is to link math.h, g++ will automaticall link libm
-    set (CMAKE_CXX_FLAGS " -g -Wall -L/usr/include/gsl -lgsl ${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} $ENV{glib_CFLAGS} $ENV{glib_LIBS} -std=c++11")
+    set (CMAKE_C_FLAGS "$ENV{CMAKE_C_FLAGS} ${OpenMP_C_FLAGS} $ENV{glib_CFLAGS} $ENV{gsl_CFLAGS} $ENV{glib_LIBS} $ENV{gsl_LIBS} -lstdc++ -lm")			#-lm is to link math.h, g++ will automaticall link libm
+    set (CMAKE_CXX_FLAGS "$ENV{CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} $ENV{glib_CFLAGS} $ENV{gls_CFLAGS} $ENV{glib_LIBS} $ENV{gsl_LIBS} -std=c++11")
 	message(CMAKE_C_FLAGS " ${CMAKE_C_FLAGS}")
 	message(CMAKE_CXX_FLAGS " ${CMAKE_CXX_FLAGS}")
 endif()

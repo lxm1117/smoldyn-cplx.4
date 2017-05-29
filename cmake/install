@@ -1,3 +1,338 @@
+/home/ximi/Downloads/smoldyn-cplx.4/source/lib/Geometry.c: In function ‘int Geo_RectXaabb3(double*, double*, double*, double*, double*, double*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/lib/Geometry.c:1577:27: warning: variable ‘r8’ set but not used [-Wunused-but-set-variable]
+  double r5[3],r6[3],r7[3],r8[3],v1[3],b1,b2,b3,b4,b5,b6,b7,b8,cmp;
+                           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/lib/string2.c: In function ‘int strisnumber(const char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/lib/string2.c:35:10: warning: variable ‘dbl’ set but not used [-Wunused-but-set-variable]
+   double dbl;
+          ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c: In function ‘int reassignmolecs(simptr, int, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c:802:13: warning: unused variable ‘m2’ [-Wunused-variable]
+  int m,nmol,m2,ll;
+             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c:804:27: warning: unused variable ‘mlist2’ [-Wunused-variable]
+  moleculeptr mptr,*mlist,*mlist2;
+                           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdwarnescapee(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:547:11: warning: variable ‘wlist’ set but not used [-Wunused-but-set-variable]
+  wallptr *wlist;
+           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdmolstatecountincmpt(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:755:41: warning: unused variable ‘nsites’ [-Wunused-variable]
+  int ll,m,*ct,itct,c,i,nspecies,nstates,nsites,s;
+                                         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdlistmols3(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:1170:13: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int i,m,ll,dim,invk,lllo,llhi,nmol,d;
+             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdlistmols4(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:1201:13: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int i,m,ll,dim,invk,lllo,llhi,nmol,d;
+             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdlistmolscmpt(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:1232:15: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int i,c,m,ll,dim,invk,lllo,llhi,nmol,itct,d;
+               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmddiagnostics(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:1893:17: warning: unused variable ‘molec_num’ [-Wunused-variable]
+  int itct,order,molec_num;
+                 ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdkillmol(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2147:23: warning: variable ‘nmol’ set but not used [-Wunused-but-set-variable]
+  int i,ll,m,lllo,llhi,nmol;
+                       ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c: In function ‘CMDcode cmdreact1(simptr, cmdptr, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2629:104: warning: passing NULL to non-pointer argument 11 of ‘int doreact(rxnssptr, gpointer, moleculeptr, moleculeptr, int, int, int, int, double*, panelptr, int, int, double, double, double)’ [-Wconversion-null]
+     if(doreact(sim->rxnss[1],(gpointer)(GSList*)r,mptr,NULL,ll,m,-1,-1,NULL,NULL,NULL,NULL,NULL,dc1,dc2)) return CMDwarn; }}
+                                                                                                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2629:104: warning: passing NULL to non-pointer argument 12 of ‘int doreact(rxnssptr, gpointer, moleculeptr, moleculeptr, int, int, int, int, double*, panelptr, int, int, double, double, double)’ [-Wconversion-null]
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2629:104: warning: passing NULL to non-pointer argument 13 of ‘int doreact(rxnssptr, gpointer, moleculeptr, moleculeptr, int, int, int, int, double*, panelptr, int, int, double, double, double)’ [-Wconversion-null]
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2629:104: warning: ‘dc1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c:2629:104: warning: ‘dc2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c: In function ‘compartsuperstruct* compartssalloc(compartssptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c:413:8: warning: variable ‘newcmptss’ set but not used [-Wunused-but-set-variable]
+  int c,newcmptss;
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c: In function ‘compartstruct* compartreadstring(simptr, ParseFilePtr, compartptr, const char*, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c:885:15: warning: variable ‘cmptss’ set but not used [-Wunused-but-set-variable]
+  compartssptr cmptss;
+               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c: In function ‘filamentsuperstruct* filssalloc(filamentssptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c:280:8: warning: variable ‘newfilss’ set but not used [-Wunused-but-set-variable]
+  int f,newfilss;
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c: In function ‘void filssoutput(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c:390:8: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int f,dim;
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c: In function ‘int filcheckparams(simptr, int*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c:426:14: warning: variable ‘fil’ set but not used [-Wunused-but-set-variable]
+  filamentptr fil;
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c: In function ‘filamentstruct* filreadstring(simptr, ParseFilePtr, filamentptr, const char*, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c:746:16: warning: variable ‘filss’ set but not used [-Wunused-but-set-variable]
+  filamentssptr filss;
+                ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c: In function ‘void RenderSim(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c:1267:11: warning: variable ‘mols’ set but not used [-Wunused-but-set-variable]
+  molssptr mols;
+           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c: In function ‘void TimerFunction(int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c:1337:6: warning: variable ‘qflag’ set but not used [-Wunused-but-set-variable]
+  int qflag;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int readmolname_cplx(simptr, char*, int**, int**)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:262:28: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  while(cptr=strchr(str0,'~')){
+                            ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:281:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    cptr=strsplit(molec,"@");
+                           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:286:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     s=strsplit(cptr,"-");
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:313:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    cptr=strsplit(molec,"@");
+                           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int molstring2pattern(simptr, char*, MolecState*, char*, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:330:36: warning: unused variable ‘sitestr’ [-Wunused-variable]
+  char nm[STRCHAR],*pareno,*parenc,*sitestr;
+                                    ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int molstring2index1(simptr, char*, MolecState*, int**)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:521:24: warning: unused variable ‘site’ [-Wunused-variable]
+  int er,isall,*index, *site;
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int molsetdrift(simptr, int, int*, MolecState, double*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:714:10: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int j,d,dim;
+          ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘double MolCalcDifcSum(simptr, moleculeptr, moleculeptr, double*, double*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1189:20: warning: unused variable ‘adj_factor1’ [-Wunused-variable]
+  double sum1,sum2, adj_factor1,adj_factor2;
+                    ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1189:32: warning: unused variable ‘adj_factor2’ [-Wunused-variable]
+  double sum1,sum2, adj_factor1,adj_factor2;
+                                ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1190:14: warning: unused variable ‘s’ [-Wunused-variable]
+  int i1, i2, s, dif_ident;
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1192:14: warning: unused variable ‘mptr_bind1’ [-Wunused-variable]
+  moleculeptr mptr_bind1, dif_molec1, mptr_bind2, dif_molec2,cplx_dif;
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1192:38: warning: unused variable ‘mptr_bind2’ [-Wunused-variable]
+  moleculeptr mptr_bind1, dif_molec1, mptr_bind2, dif_molec2,cplx_dif;
+                                      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1192:61: warning: unused variable ‘cplx_dif’ [-Wunused-variable]
+  moleculeptr mptr_bind1, dif_molec1, mptr_bind2, dif_molec2,cplx_dif;
+                                                             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1193:10: warning: unused variable ‘r’ [-Wunused-variable]
+  GSList *r;
+          ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1194:11: warning: unused variable ‘r_indx’ [-Wunused-variable]
+  intptr_t r_indx;
+           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘moleculestruct* molalloc(simptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1237:9: warning: unused variable ‘d1’ [-Wunused-variable]
+  int d, d1;
+         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘void molfree(simptr, moleculeptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1302:6: warning: unused variable ‘d’ [-Wunused-variable]
+  int d,k;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘molsuperstruct* molssalloc(molssptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1491:6: warning: variable ‘newmols’ set but not used [-Wunused-but-set-variable]
+  int newmols,i,j,**newexist,**newlistlookup,*newexpand,oldmaxspecies, *newspsites_num, *newvolt_dependent;// *newspdifsites;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:1491:16: warning: unused variable ‘j’ [-Wunused-variable]
+  int newmols,i,j,**newexist,**newlistlookup,*newexpand,oldmaxspecies, *newspsites_num, *newvolt_dependent;// *newspdifsites;
+                ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int checkmolparams(simptr, int*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2200:11: warning: variable ‘wlist’ set but not used [-Wunused-but-set-variable]
+  wallptr *wlist;
+           ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int moldifsites(simptr, char*, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2370:6: warning: unused variable ‘er’ [-Wunused-variable]
+  int er, sp_indx, site_indx;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2372:8: warning: unused variable ‘cptr’ [-Wunused-variable]
+  char *cptr, str0[STRCHAR];
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2372:14: warning: unused variable ‘str0’ [-Wunused-variable]
+  char *cptr, str0[STRCHAR];
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int moladdsites(simptr, char*, char*, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2388:22: warning: unused variable ‘site_indx’ [-Wunused-variable]
+  int er, sp_indx, i, site_indx;
+                      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int moladdspecies(simptr, const char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2452:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    strsplit(nm_tmp,"<");
+                       ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘void molkill(simptr, moleculeptr, int, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2619:15: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  mptr->s_index=NULL;
+               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2600:8: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int s,dim,d,*sortl,s1;
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2600:15: warning: variable ‘sortl’ set but not used [-Wunused-but-set-variable]
+  int s,dim,d,*sortl,s1;
+               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘moleculestruct* getnextmol_cplx(molssptr, int, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2785:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     site_bind=strsplit(sitename_tmp,".");       
+                                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2686:6: warning: unused variable ‘d’ [-Wunused-variable]
+  int d,i,k,spsites_num,site_indx;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int addsurfmol(simptr, int, int, MolecState, double*, panelptr, int, PanelShape, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2894:38: warning: variable ‘totarea’ set but not used [-Wunused-but-set-variable]
+  double *areatable,area,mpos[DIMMAX],totarea;
+                                      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int addsurfmol_cplx(simptr, int, int, int, int*, int*, MolecState, double*, panelptr, int, PanelShape, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2984:38: warning: variable ‘totarea’ set but not used [-Wunused-but-set-variable]
+  double *areatable,area,mpos[DIMMAX],totarea;
+                                      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int addcompartmol_cplx(simptr, int, int, int, int*, int*, compartptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3100:14: warning: unused variable ‘k’ [-Wunused-variable]
+  int d,dim,m,k,er;
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int molsort(simptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3201:7: warning: unused variable ‘list_new’ [-Wunused-variable]
+  int *list_new;
+       ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3202:6: warning: unused variable ‘list_maxlen’ [-Wunused-variable]
+  int list_maxlen=0;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int diffuse(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3444:31: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       vstr1=strsplit(vstr,"\t");
+                               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3525:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         if(complex_pos(sim,mptr,"posx", &offset[0],1)==-1){
+                                                     ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3399:52: warning: variable ‘drift’ set but not used [-Wunused-but-set-variable]
+  double v1[DIMMAX],v2[DIMMAX],**difstep,***difm,***drift,epsilon,margin,neighdist,*gtable,dt;
+                                                    ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3401:20: warning: unused variable ‘mptr_tmp’ [-Wunused-variable]
+  moleculeptr mptr, mptr_tmp;
+                    ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3404:6: warning: unused variable ‘m_next’ [-Wunused-variable]
+  int m_next,difc_type;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int complex_pos(simptr, moleculeptr, char*, double*, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3659:24: warning: unused variable ‘mptr_bind’ [-Wunused-variable]
+  moleculeptr mptr_tmp, mptr_bind;
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3660:15: warning: unused variable ‘site’ [-Wunused-variable]
+  int sunit_i, site,sunit;
+               ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3660:20: warning: unused variable ‘sunit’ [-Wunused-variable]
+  int sunit_i, site,sunit;
+                    ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3661:9: warning: unused variable ‘d1’ [-Wunused-variable]
+  int d, d1;
+         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3663:12: warning: unused variable ‘sunit_dist’ [-Wunused-variable]
+     double sunit_dist, offset_tmp[3]={0,0,0};
+            ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3663:24: warning: unused variable ‘offset_tmp’ [-Wunused-variable]
+     double sunit_dist, offset_tmp[3]={0,0,0};
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3665:6: warning: unused variable ‘s’ [-Wunused-variable]
+  int s,k;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3665:8: warning: unused variable ‘k’ [-Wunused-variable]
+  int s,k;
+        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3666:14: warning: unused variable ‘complex_connect’ [-Wunused-variable]
+  GHashTable* complex_connect=sim->mols->complex_connect;
+              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3667:13: warning: unused variable ‘complex_bind’ [-Wunused-variable]
+  complexptr complex_bind, complex_tmp;
+             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3668:7: warning: unused variable ‘pos_tmp’ [-Wunused-variable]
+  char pos_tmp[STRCHAR];
+       ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3669:6: warning: unused variable ‘sindex_tmp’ [-Wunused-variable]
+  int sindex_tmp, sindex_bind;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3669:18: warning: unused variable ‘sindex_bind’ [-Wunused-variable]
+  int sindex_tmp, sindex_bind;
+                  ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int boundarytest(simptr, double*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3782:6: warning: unused variable ‘c’ [-Wunused-variable]
+  int c;
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘double sgn(double)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3834:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int molssetgausstable(simptr, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:630:2: warning: ‘er’ is used uninitialized in this function [-Wuninitialized]
+  if(er) return er;
+  ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘void complex_pos_init(simptr, moleculeptr, compartptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3606:24: warning: ‘z1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[2]= z1-r*cos(theta_tmp);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3607:24: warning: ‘y1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[1]= y1-r*sin(theta_tmp)*sin(mptr_tmp->phi_init);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3608:24: warning: ‘x1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[0]= x1-r*sin(theta_tmp)*cos(mptr_tmp->phi_init);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘moleculestruct* getnextmol_cplx(molssptr, int, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2782:34: warning: ‘spsites_name’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if(strstr(spsites_name[k],"n.")){
+                                  ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘moleculestruct* getnextmol_cplx(molssptr, int, int)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:2782:34: warning: ‘spsites_name’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘void complex_pos_init(simptr, moleculeptr, compartptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3606:24: warning: ‘z1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[2]= z1-r*cos(theta_tmp);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3607:24: warning: ‘y1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[1]= y1-r*sin(theta_tmp)*sin(mptr_tmp->phi_init);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3608:24: warning: ‘x1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr_tmp->pos[0]= x1-r*sin(theta_tmp)*cos(mptr_tmp->phi_init);
+                        ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘double SBM(simptr, moleculeptr, interfaceptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3875:46: warning: ‘rnd_g1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    mptr->pos[d]+=sqrt(2*difc1*sim->dt)*rnd_g1;
+                                              ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3864:48: warning: ‘difc2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     mptr->pos[d]+=sqrt(2*difc1*s)*rnd_g1+sqrt(2*difc2*(sim->dt-s))*rnd_g2;   
+                                                ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3860:58: warning: ‘difc1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   theta=(sqrt(difc2)-sqrt(difc1))/(sqrt(difc2)+sqrt(difc1));
+                                                          ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c: In function ‘int diffuse(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c:3504:6: warning: ‘difc_type’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if(difc_type==1) {
+      ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c: In function ‘portstruct* portreadstring(simptr, ParseFilePtr, portptr, const char*, char*)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c:283:12: warning: variable ‘portss’ set but not used [-Wunused-but-set-variable]
+  portssptr portss;
+            ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c: In function ‘int latticesupdateparams(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c:859:9: warning: variable ‘start’ set but not used [-Wunused-but-set-variable]
+  double start[3];
+         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c:860:9: warning: variable ‘end’ set but not used [-Wunused-but-set-variable]
+  double end[3];
+         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c:861:9: warning: variable ‘norm’ set but not used [-Wunused-but-set-variable]
+  double norm[3];
+         ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c:866:13: warning: variable ‘surface’ set but not used [-Wunused-but-set-variable]
+  surfaceptr surface;
+             ^
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c: In function ‘int latticesupdatelists(simptr)’:
+/home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c:935:8: warning: variable ‘si’ set but not used [-Wunused-but-set-variable]
+  int i,si,m,s;
+        ^
 /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c: In function ‘simstruct* simalloc(const char*)’:
 /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c:206:7: warning: unused variable ‘order’ [-Wunused-variable]
    int order,k;
@@ -1145,113 +1480,3 @@ In file included from /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolrea
 /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c:31:19: warning: variable ‘qflag’ set but not used [-Wunused-but-set-variable]
     int i,er,pflag,qflag,wflag,tflag,Vflag,oflag;
                    ^
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ztrsv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_scasum'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_izamax'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dnrm2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zdotc_sub'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cgemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cher2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cdotu_sub'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ddot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zdscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zsyr2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_chemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zgemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ccopy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_isamax'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ctrmv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cswap'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cgeru'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zher'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_daxpy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ctrsv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cdotc_sub'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zgemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_csyrk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ctrmm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sdsdot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_csscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dger'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ctrsm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsyrk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_icamax'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsyr'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsyr2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dtrmv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dasum'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsymv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_strsm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_srot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssyr'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_srotmg'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_scnrm2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_snrm2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zgeru'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zhemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dcopy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsyr2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_drotmg'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ztrmm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dtrmm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_srotm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_chemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dznrm2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_drotm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsymm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_strsv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sdot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssyr2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_idamax'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dtrsm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zhemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zsyrk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dzasum'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_csyr2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zgerc'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sgemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zher2k'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssyr2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zswap'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dgemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sgemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_csymm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_strmm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zsymm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_srotg'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_drotg'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zcopy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dswap'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cher'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ztrmv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zherk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_scopy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_caxpy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zscal'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cgerc'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssymm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ztrsm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cherk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssyrk'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sger'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_strmv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_saxpy'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dgemv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_drot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dsdot'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cgemm'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zdotu_sub'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sswap'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_cher2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_ssymv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_dtrsv'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zher2'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_sasum'
-/usr/local/lib/libgsl.so: undefined reference to `cblas_zaxpy'
-collect2: error: ld returned 1 exit status
-make[2]: *** [smoldyn-cplx4] Error 1
-make[1]: *** [CMakeFiles/smoldyn-cplx4.dir/all] Error 2
-make: *** [all] Error 2

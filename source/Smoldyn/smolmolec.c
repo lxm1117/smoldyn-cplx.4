@@ -3401,7 +3401,7 @@ int diffuse(simptr sim) {
 	moleculeptr mptr, mptr_tmp;
 	int incmpt_flag=0;	
 	int incmpt_posx_flag=0;
-	int m_next;
+	int m_next,difc_type;
 	complexptr cplx;
 
 	if(!sim->mols) return 0;
@@ -3419,7 +3419,6 @@ int diffuse(simptr sim) {
 	neighdist=(sim->srfss)?sim->srfss->neighdist:0;
 	double offset[dim];
 	int updated_flag;									// to check whether a bound molec has been updated or not, to prevent double update
-	double adj_factor;
 	char vstr[STRCHAR], *vstr1;
 	double volt,vtime;
 
@@ -3492,18 +3491,15 @@ int diffuse(simptr sim) {
 				}}
 				*/
 				if(!difm[i][ms]){															// isotropic diffusion
-					if(sim->interfaces) {
-						if(sim->interfaces[mptr->ident]){	
-							if(posincompart(sim,mptr->pos,sim->interfaces[mptr->ident]->cmpt)) {
-								theta,difc=f(sim->interfaces[mptr->ident]->cmpt, mptr->pos)
-								exacthittingtime
-								mptr_new_pos=sbm()
-
-
-
-					}
-					}else { difc_type=1;}	
-				
+					if(sim->interface) {
+						if(sim->interface->species==mptr->ident){	
+							if(posincompart(sim,mptr->pos,sim->interface->cmpt)){ 
+								SBM(sim,mptr,sim->interface);
+								difc_type=0;
+							}
+						}else{	difc_type=1; }
+					}	
+					else{	difc_type=1;	}
 					
 					if(difc_type==1) {
 						if(mptr->tot_sunit==1 && mptr->pos==mptr->pos_tmp) {
@@ -3797,74 +3793,96 @@ int boundarytest(simptr sim, double *pos){
 }
 
 
-double ExactHittingTime_sbm(simptr sim, moleculeptr mptr,double difc){
-	//z=x/sqrt(2.0*difc);
-	//y=z+sqrt(sim->dt*eta);
+double ExactHittingTime_sbm(simptr sim, moleculeptr mptr, double difc, double interface_pos, double* x_pos){
+	double x, x_tmp, z, y, rnd, rnd_ivg, u, cross_prob, tau;
+	gsl_rng *r=gsl_rng_alloc(gsl_rng_default);
+	
+	rnd=gsl_ran_gaussian_ziggurat(r,1.0);
 	x=mptr->pos[2];
-	x_tmp=x+sqrt(2.0*difc*sim->dt*fabs(rnd));
+	x_tmp=x+sqrt(2.0*difc*sim->dt)*rnd;
+	z=(x-interface_pos)/sqrt(2.0*difc);
+	y=(x_tmp-interface_pos)/sqrt(2.0*difc);
 
-	if(sgn(z-interface_pos)!=sgn(y-interface_pos)){
-		tau=sim->dt*rnd/(1.0+rnd);
+	if(sgn(x-interface_pos)!=sgn(x_tmp-interface_pos)){
+		rnd_ivg=invGaussian(fabs(z)/fabs(y),z*z/sim->dt);	
+		tau=sim->dt*rnd_ivg/(1.0+rnd_ivg);
+		x_pos[0]=interface_pos;
 		return tau;
 	}	
 	else{
-		eta=invGaussian(fabs(z)/fabs(y),z**2/sim->dt);
+		rnd_ivg=invGaussian(fabs(z)/fabs(y),z*z/sim->dt);
 		u=randCOD();
-		cross_prob=exp(-2.0*(interface_pos-x)*(interface_pos-x_tmp)/(2.0*difc*sim->dt));
+		cross_prob=exp(-2.0*z*y/sim->dt);
 		if(u<cross_prob){
-			eta=invGaussian(fabs(z)/fabs(y),z**2/sim->dt);
-			tau=sim->dt*eta/(1.0+eta);
+			rnd_ivg=invGaussian(fabs(z)/fabs(y),z*z/sim->dt);	
+			tau=sim->dt*rnd_ivg/(1.0+rnd_ivg);
+			x_pos[0]=interface_pos;	
 			return tau;
 		}
 		else{
-			return sim->dt+time
+			x_pos[0]=x_tmp;
+			return sim->dt;
 		}
 	}
 }
 
 double sgn(double x){
-	if(x>0)
+	if(x>=0)
 		return 1;
 	else if(x<0)
 		return -1;
-	else 
-		return 0;
 }
 
 
-double SBM(simptr sim, moleculeptr mptr, cmpt){
-	double s,rnd_u,rnd_g,theta
-	s=ExactHittingTime_sbm(sim,mptr,&y);
+double SBM(simptr sim, moleculeptr mptr, interfaceptr intfptr){
+	double s, rnd_u, rnd_g1, rnd_g2, theta, difc1, difc2, x_pos, interface_pos;
+	int d;
+	gsl_rng *r=gsl_rng_alloc(gsl_rng_default);
+	
+	interface_pos=intfptr->pos;
+	if(sgn(mptr->pos[2]-interface_pos)==sgn(intfptr->side1-interface_pos)){
+		difc1=intfptr->difc1;
+		difc2=intfptr->difc2;
+	}
+	else if(sgn(mptr->pos[2]-interface_pos)==sgn(intfptr->side2-interface_pos)){
+		difc1=intfptr->difc1;
+		difc2=intfptr->difc2;
+	}
+	s=ExactHittingTime_sbm(sim,mptr,difc1,interface_pos,&x_pos);
 
-	if(s<sim->time+sim->dt){
-		rnd_u=randCOD()
+	if(s<sim->dt){
+		rnd_u=randCOD();
 		// gsl_ran_gaussian_ziggurat(const gsl_rng *r, double sigma)
-		gsl_ran_gaussian_ziggurat(&rnd_g,1.0);
+		rnd_g1=gsl_ran_gaussian_ziggurat(r,1.0);
+		rnd_g2=gsl_ran_gaussian_ziggurat(r,1.0);
 
 		// interface naturall seperates two compartment, each with distinct D; maybe a linkedlist structure
-		difc1=interface->cmpt->difc 		// the current difc
-		difc2=interface->cmpt->next->difc 	// the next difc	
 		theta=(sqrt(difc2)-sqrt(difc1))/(sqrt(difc2)+sqrt(difc1));
 
-		if(u<(1.0+theta)/2.0){		
+		if(rnd_u<(1.0+theta)/2.0){		
 			for(d=0;d<sim->dim-1;d++)
-				mptr->pos[d]=mptr->pos[d]+sqrt(2*difc1*s)*fabs(G2)+sqrt(2*difc2*(sim->dt-s))*fabs(G3);			
-			mptr->pos[2]=z_interface+sqrt(2*difc1*(sim->dt-s))*fabs(G2);
+				mptr->pos[d]+=sqrt(2*difc1*s)*rnd_g1+sqrt(2*difc2*(sim->dt-s))*rnd_g2;			
+			mptr->pos[2]=x_pos+sqrt(2*difc2*(sim->dt-s))*fabs(rnd_g2);
 		}
 		else{ 
 			for(d=0;d<sim->dim-1;d++)	
-				mptr->pos[d]=mptr->pos[d]+sqrt(2*difc
-			mptr->pos[2]=z_interface+sqrt(2*difc2*(sim->dt-s))*fabs(G2);
+				mptr->pos[d]+=sqrt(2*difc1*s)*rnd_g1+sqrt(2*difc1*(sim->dt-s))*rnd_g2;
+			mptr->pos[2]=interface_pos-sqrt(2*difc1*(sim->dt-s))*fabs(rnd_g2);
 		}
 	}
-	else
-		return x_interface+y; 
+	else{
+		for(d=0;d<sim->dim-1;d++)
+			mptr->pos[d]+=sqrt(2*difc1*sim->dt)*rnd_g1;
+		mptr->pos[2]=x_pos;
+	}
+	return 0; 
 }
 
 double invGaussian(double mu, double lambda){
 	double rnd,test,y,x;
-	
-	gsl_ran_gaussian_ziggurat(&rnd,1.0);
+	gsl_rng *r=gsl_rng_alloc(gsl_rng_default);
+
+	rnd=gsl_ran_gaussian_ziggurat(r,1.0);
 	y=rnd*rnd;
 	x=mu+(mu*mu*y)/(2.0*lambda)-(mu/(2.0*lambda))*sqrt(4.0*mu*lambda*y + mu*mu*y*y);	
 	test=randCOD();
@@ -3872,7 +3890,4 @@ double invGaussian(double mu, double lambda){
 		return x;
 	else 
 		return (mu*mu)/x;
-}
-
-
 }

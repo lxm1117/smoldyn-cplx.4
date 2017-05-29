@@ -512,3 +512,12 @@ int gpointer_cmpr(gconstpointer v1, gconstpointer v2);
 /********************************* radius pair map **********************/
 // int r_pair_equal(r_pair p1, r_pair p2);
 // void dmap_alloc(difc_map* ptr);
+
+/****************random numbers*****************************************/
+double invGaussian(double mu, double lambda);
+
+
+/***************other utilities****************************************/
+double sgn(double x);
+double ExactHittingTime_sbm(simptr sim, moleculeptr mptr, double difc, double interface_pos, double* x_pos);
+double SBM(simptr sim, moleculeptr mptr, interfaceptr intfptr); 

@@ -247,6 +247,7 @@ simptr simalloc(const char *fileroot) {
 	sim->bimolreactfn=&bireact;
 	sim->checkwallsfn=&checkwalls;
 	sim->multibinding=0;
+	sim->interface=NULL;
 
 	CHECKMEM(sim->filepath=EmptyString());
 	CHECKMEM(sim->filename=EmptyString());
@@ -279,6 +280,9 @@ void simfree(simptr sim) {
 	wallsfree(sim->wlist,dim);
 	molssfree(sim->mols,maxsrf);
 	for(k=0;k<MAXORDER;k++)	{ if(sim->rxnss[k])	rxnssfree(sim->rxnss[k]);	}
+	if(sim->interface)
+		free(sim->interface);
+
 	free(sim->flags);
 	free(sim->filename);
 	free(sim->filepath);
@@ -618,12 +622,9 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 
 	else if(!strcmp(word,"interface_layer")){
 		int molec_ident;
-		double adj_factor;
+		double side1,side2,difc1,difc2,interface_pos;
 		compartptr cmpt_tmp;
-		boxptr box_tmp;
 		
-			
-
 		line2=strnword(line2,2);
 		sscanf(line2,"%s",cname);
 		c=stringfind(sim->cmptss->cnames,sim->cmptss->ncmpt,cname);
@@ -635,14 +636,23 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		CHECKS(molec_ident>0,"incorrect species name");
 
 		line2=strnword(line2,2);			
-		sscanf(line2,"%lf",&adj_factor);
-		if(!cmpt_tmp->difadj){
-			cmpt_tmp->difadj=(double*) calloc(sim->mols->nspecies,sizeof(double));
-			for(i=0;i<sim->mols->nspecies;i++)
-				cmpt_tmp->difadj[i]=1;
-		}
-		cmpt_tmp->difadj[molec_ident]=adj_factor;	
-		
+		sscanf(line2,"%lf",&side1);
+		line2=strnword(line2,2);
+		sscanf(line2,"%lf",&side2);
+		line2=strnword(line2,2);
+		sscanf(line2,"%lf",&difc1);
+		line2=strnword(line2,2);
+		sscanf(line2,"%lf",&difc2);
+
+		if(!sim->interface)
+			CHECKMEM(sim->interface=(interfaceptr) malloc(sizeof(struct interface_struct)));	
+
+		sim->interface->side1=side1;
+		sim->interface->side2=side2;
+		sim->interface->difc1=difc1;
+		sim->interface->difc2=difc2;
+		sim->interface->pos=interface_pos;
+		sim->interface->species=molec_ident;
 		/*
 		// the following is done in compartsupdate() and compartupdatebox(), after boxes are setup	
 		for(i=0;i<cmpt_tmp->nbox;i++){

@@ -16,6 +16,7 @@
 #include <map>
 #include <utility>
 #include <iostream>
+#include <gsl/gsl_randist.h>
 
 #ifdef OPTION_NSV
   #include "nsvc.h"
@@ -373,11 +374,14 @@ typedef struct surfacesuperstruct {
 
 typedef struct interface_struct{
 	struct simstruct *sim;
-	int species;
 	struct compartstruct *cmpt;
-	double theta;
-	double interface_pos;
-} *interfacezoneptr;
+	double pos;
+	double difc1;
+	double difc2;  
+	double side1;
+	double side2;
+	int species;
+} *interfaceptr;
 /*********************************** Boxes **********************************/
 
 typedef struct boxstruct {
@@ -692,7 +696,7 @@ typedef struct simstruct {
 	bimolreactfnptr bimolreactfn;								// function for second order reactions
 	checkwallsfnptr checkwallsfn;								// function for molecule collisions with walls
 	int multibinding;
-	interfacezoneptr *interfaces;	
+	interfaceptr interface;	
 
 #ifdef OPTION_VCELL
 	VolumeSamplesPtr volumeSamplesPtr;

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neuro/Downloads/smoldyn-cplx.4
+CMAKE_SOURCE_DIR = /home/ximi/Downloads/smoldyn-cplx.4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neuro/Downloads/smoldyn-cplx.4/cmake
+CMAKE_BINARY_DIR = /home/ximi/Downloads/smoldyn-cplx.4/cmake
 
 # Include any dependencies generated for this target.
 include CMakeFiles/smoldyn-cplx4.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/smoldyn-cplx4.dir/flags.make
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o: ../source/lib/Geometry.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Geometry.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Geometry.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Geometry.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Geometry.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Geometry.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Geometry.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/Geometry.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o: ../source/lib/List.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/List.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/List.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/List.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/List.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/List.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/List.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/List.c.o.provides.build: CMakeFiles/smol
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o: ../source/lib/math2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/math2.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/math2.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/math2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/math2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/math2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/math2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/math2.c.o.provides.build: CMakeFiles/smo
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o: ../source/lib/opengl2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/opengl2.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/opengl2.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/opengl2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/opengl2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/opengl2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/opengl2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/opengl2.c.o.provides.build: CMakeFiles/s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o: ../source/lib/parse.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/parse.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/parse.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/parse.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/parse.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/parse.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/parse.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/parse.c.o.provides.build: CMakeFiles/smo
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o: ../source/lib/queue.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/queue.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/queue.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/queue.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/queue.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/queue.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/queue.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o.requires
@@ -189,17 +189,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/queue.c.o.provides.build: CMakeFiles/smo
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o: ../source/lib/random2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/random2.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/random2.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/random2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/random2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/random2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/random2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o.requires
@@ -212,17 +212,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/random2.c.o.provides.build: CMakeFiles/s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o: ../source/lib/Rn.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Rn.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Rn.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Rn.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Rn.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Rn.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Rn.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o.requires
@@ -235,17 +235,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/Rn.c.o.provides.build: CMakeFiles/smoldy
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o: ../source/lib/RnSort.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/RnSort.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/RnSort.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/RnSort.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/RnSort.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/RnSort.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/RnSort.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o.requires
@@ -258,17 +258,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/RnSort.c.o.provides.build: CMakeFiles/sm
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o: ../source/lib/rxnparam.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/rxnparam.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o.requires
@@ -281,17 +281,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/rxnparam.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o: ../source/lib/SimCommand.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SimCommand.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o.requires
@@ -304,17 +304,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/SimCommand.c.o.provides.build: CMakeFile
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o: ../source/lib/Sphere.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Sphere.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Sphere.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Sphere.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Sphere.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Sphere.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Sphere.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o.requires
@@ -327,17 +327,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/Sphere.c.o.provides.build: CMakeFiles/sm
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o: ../source/lib/string2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/string2.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/string2.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/string2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/string2.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/string2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/string2.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o.requires
@@ -350,17 +350,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/string2.c.o.provides.build: CMakeFiles/s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o: ../source/lib/SurfaceParam.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SurfaceParam.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o.requires
@@ -373,17 +373,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/SurfaceParam.c.o.provides.build: CMakeFi
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o: ../source/lib/Zn.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Zn.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Zn.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Zn.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Zn.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/Zn.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/Zn.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o.requires
@@ -396,17 +396,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/Zn.c.o.provides.build: CMakeFiles/smoldy
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o: ../source/lib/SFMT/SFMT.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c > CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/lib/SFMT/SFMT.c -o CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o.requires
@@ -419,17 +419,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/lib/SFMT/SFMT.c.o.provides.build: CMakeFiles
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o: ../source/Smoldyn/smolboxes.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolboxes.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o.requires
@@ -442,17 +442,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolboxes.c.o.provides.build: CMakeF
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o: ../source/Smoldyn/smolcmd.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcmd.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o.requires
@@ -465,17 +465,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcmd.c.o.provides.build: CMakeFil
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o: ../source/Smoldyn/smolcomparts.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolcomparts.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o.requires
@@ -488,17 +488,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolcomparts.c.o.provides.build: CMa
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o: ../source/Smoldyn/smolfilament.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolfilament.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o.requires
@@ -511,17 +511,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolfilament.c.o.provides.build: CMa
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o: ../source/Smoldyn/smolgraphics.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolgraphics.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o.requires
@@ -534,17 +534,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolgraphics.c.o.provides.build: CMa
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o: ../source/Smoldyn/smolmolec.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolmolec.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o.requires
@@ -557,17 +557,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolmolec.c.o.provides.build: CMakeF
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o: ../source/Smoldyn/smolport.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolport.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o.requires
@@ -580,17 +580,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolport.c.o.provides.build: CMakeFi
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o: ../source/Smoldyn/smollattice.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smollattice.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o.requires
@@ -603,17 +603,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smollattice.c.o.provides.build: CMak
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o: ../source/Smoldyn/smolsim.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsim.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o.requires
@@ -626,17 +626,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsim.c.o.provides.build: CMakeFil
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o: ../source/Smoldyn/smolreact.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolreact.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o.requires
@@ -649,17 +649,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolreact.c.o.provides.build: CMakeF
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o: ../source/Smoldyn/smolsurface.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o.requires
@@ -672,17 +672,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o.provides.build: CMak
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o: ../source/Smoldyn/smolwall.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smolwall.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o.requires
@@ -695,17 +695,17 @@ CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o.provides.build: CMakeFi
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o: CMakeFiles/smoldyn-cplx4.dir/flags.make
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o: ../source/Smoldyn/smoldyn.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o -c /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o -c /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c > CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.i
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ximi/Downloads/smoldyn-cplx.4/source/Smoldyn/smoldyn.c -o CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.s
 
 CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o.requires:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o.requires
@@ -781,16 +781,16 @@ smoldyn-cplx4: CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolsurface.c.o
 smoldyn-cplx4: CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smolwall.c.o
 smoldyn-cplx4: CMakeFiles/smoldyn-cplx4.dir/source/Smoldyn/smoldyn.c.o
 smoldyn-cplx4: CMakeFiles/smoldyn-cplx4.dir/build.make
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libGLU.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libGL.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libSM.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libICE.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libX11.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libXext.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libglut.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libXmu.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libXi.so
-smoldyn-cplx4: /usr/lib/x86_64-linux-gnu/libtiff.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libGLU.so
+smoldyn-cplx4: /usr/lib/libGL.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libSM.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libICE.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libX11.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libXext.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libglut.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libXmu.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libXi.so
+smoldyn-cplx4: /usr/lib/i386-linux-gnu/libtiff.so
 smoldyn-cplx4: CMakeFiles/smoldyn-cplx4.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable smoldyn-cplx4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/smoldyn-cplx4.dir/link.txt --verbose=$(VERBOSE)
@@ -835,6 +835,6 @@ CMakeFiles/smoldyn-cplx4.dir/clean:
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/clean
 
 CMakeFiles/smoldyn-cplx4.dir/depend:
-	cd /home/neuro/Downloads/smoldyn-cplx.4/cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neuro/Downloads/smoldyn-cplx.4 /home/neuro/Downloads/smoldyn-cplx.4 /home/neuro/Downloads/smoldyn-cplx.4/cmake /home/neuro/Downloads/smoldyn-cplx.4/cmake /home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/smoldyn-cplx4.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ximi/Downloads/smoldyn-cplx.4/cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ximi/Downloads/smoldyn-cplx.4 /home/ximi/Downloads/smoldyn-cplx.4 /home/ximi/Downloads/smoldyn-cplx.4/cmake /home/ximi/Downloads/smoldyn-cplx.4/cmake /home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/smoldyn-cplx4.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/smoldyn-cplx4.dir/depend
 

@@ -514,7 +514,7 @@ int gpointer_cmpr(gconstpointer v1, gconstpointer v2);
 // void dmap_alloc(difc_map* ptr);
 
 /****************random numbers*****************************************/
-double invGaussian(double mu, double lambda);
+double invGaussian(simptr sim, double mu, double lambda);
 
 
 /***************other utilities****************************************/

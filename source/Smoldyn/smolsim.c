@@ -248,6 +248,7 @@ simptr simalloc(const char *fileroot) {
 	sim->checkwallsfn=&checkwalls;
 	sim->multibinding=0;
 	sim->interface=NULL;
+	sim->r=gsl_rng_alloc(gsl_rng_default);
 
 	CHECKMEM(sim->filepath=EmptyString());
 	CHECKMEM(sim->filename=EmptyString());
@@ -625,18 +626,21 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		double side1,side2,difc1,difc2,interface_pos;
 		compartptr cmpt_tmp;
 		
-		line2=strnword(line2,2);
+		line2=strnword(line2,1);
 		sscanf(line2,"%s",cname);
 		c=stringfind(sim->cmptss->cnames,sim->cmptss->ncmpt,cname);
 		CHECKS(c>0,"incorrect compartment name");
 		cmpt_tmp=sim->cmptss->cmptlist[c];
 
+		line2=strnword(line2,2);
 		sscanf(line2,"%s",species_name);
 		molec_ident=stringfind(sim->mols->spname,sim->mols->nspecies,strtrim(species_name));
 		CHECKS(molec_ident>0,"incorrect species name");
 
 		line2=strnword(line2,2);			
 		sscanf(line2,"%lf",&side1);
+		line2=strnword(line2,2);
+		sscanf(line2,"%lf",&interface_pos);
 		line2=strnword(line2,2);
 		sscanf(line2,"%lf",&side2);
 		line2=strnword(line2,2);
@@ -653,6 +657,7 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		sim->interface->difc2=difc2;
 		sim->interface->pos=interface_pos;
 		sim->interface->species=molec_ident;
+		sim->interface->cmpt=cmpt_tmp;
 		/*
 		// the following is done in compartsupdate() and compartupdatebox(), after boxes are setup	
 		for(i=0;i<cmpt_tmp->nbox;i++){
@@ -1950,8 +1955,14 @@ int simulatetimestep(simptr sim) {
 	if(er) return 11;
 	*/
 
+	int m;
+	moleculeptr mptr;
+	for(m=0;m<sim->mols->nl[0];m++){
+		mptr=sim->mols->live[0][m];
+		if(sim->events) {
+			fprintf(sim->events,"sim.c time=%f m=%d serno=%d prev_pos[0]=%f prev_pos[1]=%f prev_pos[2]=%f pos[0]=%f pos[1]=%f pos[2]=%f\n", sim->time,m,mptr->serno,mptr->prev_pos[0],mptr->prev_pos[1],mptr->prev_pos[2],mptr->pos[0],mptr->pos[1],mptr->pos[2]);
+	}}
 	sim->time+=sim->dt;										// --- end of time step ---
-
 	er=simdocommands(sim);
 	if(er) return er;
 	if(sim->time>=sim->tmax) return 1;

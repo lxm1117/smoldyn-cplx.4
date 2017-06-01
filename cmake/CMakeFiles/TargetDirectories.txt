@@ -1,1 +1,9 @@
-/home/ximi/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/smoldyn-cplx4.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/edit_cache.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/rebuild_cache.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/package.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/package_source.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/smoldyn-cplx4.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/install/strip.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/install/local.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/list_install_components.dir
+/home/neuro/Downloads/smoldyn-cplx.4/cmake/CMakeFiles/install.dir

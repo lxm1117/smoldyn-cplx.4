@@ -4525,6 +4525,8 @@ int checksurfaces_cplx(simptr sim, moleculeptr mptr, int m, int ll,int reborn) {
 		via[d]=mptr->posx[d];
 		mptr->prev_pos[d]=mptr->pos[d];
 	}
+	if(sim->events)
+		fprintf(sim->events,"surf.c time=%f serno=%d prev_pos[0]=%f prev_pos[1]=%f prev_pos[2]=%f\n",sim->time, mptr->serno, mptr->prev_pos[0], mptr->prev_pos[1], mptr->prev_pos[2]);
 	pos=mptr->pos;
 	done=0;
 	it=0;

@@ -698,6 +698,7 @@ typedef struct simstruct {
 	checkwallsfnptr checkwallsfn;								// function for molecule collisions with walls
 	int multibinding;
 	interfaceptr interface;	
+	gsl_rng *r;
 
 #ifdef OPTION_VCELL
 	VolumeSamplesPtr volumeSamplesPtr;

@@ -283,6 +283,8 @@ void simfree(simptr sim) {
 	for(k=0;k<MAXORDER;k++)	{ if(sim->rxnss[k])	rxnssfree(sim->rxnss[k]);	}
 	if(sim->interface)
 		free(sim->interface);
+	if(sim->r)
+		free(sim->r);
 
 	free(sim->flags);
 	free(sim->filename);
@@ -637,13 +639,13 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		molec_ident=stringfind(sim->mols->spname,sim->mols->nspecies,strtrim(species_name));
 		CHECKS(molec_ident>0,"incorrect species name");
 
-		line2=strnword(line2,2);			
-		sscanf(line2,"%lf",&side1);
+		//line2=strnword(line2,2);			
+		//sscanf(line2,"%lf",&side1);
 		line2=strnword(line2,2);
 		sscanf(line2,"%lf",&interface_pos);
 		line2=strnword(line2,2);
-		sscanf(line2,"%lf",&side2);
-		line2=strnword(line2,2);
+		//sscanf(line2,"%lf",&side2);
+		//line2=strnword(line2,2);
 		sscanf(line2,"%lf",&difc1);
 		line2=strnword(line2,2);
 		sscanf(line2,"%lf",&difc2);
@@ -651,13 +653,15 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		if(!sim->interface)
 			CHECKMEM(sim->interface=(interfaceptr) malloc(sizeof(struct interface_struct)));	
 
-		sim->interface->side1=side1;
-		sim->interface->side2=side2;
+		sim->interface->side1=interface_pos-4.0*sqrt(2.0*difc1*sim->dt);
+		sim->interface->side2=interface_pos+4.0*sqrt(2.0*difc2*sim->dt);;
 		sim->interface->difc1=difc1;
 		sim->interface->difc2=difc2;
 		sim->interface->pos=interface_pos;
 		sim->interface->species=molec_ident;
 		sim->interface->cmpt=cmpt_tmp;
+		printf("cname:%s side1=%f side2=%f\n", cmpt_tmp->cname, sim->interface->side1, sim->interface->side2);
+
 		/*
 		// the following is done in compartsupdate() and compartupdatebox(), after boxes are setup	
 		for(i=0;i<cmpt_tmp->nbox;i++){

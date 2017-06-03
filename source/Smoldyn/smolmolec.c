@@ -3463,7 +3463,11 @@ int diffuse(simptr sim) {
 			for(m=0;m<nmol;m+=mptr->tot_sunit){
 				updated_flag=0;
 				mptr=mlist[m];
-				i=mptr->ident;
+					
+				if(mptr->pos==mptr->pos_tmp)
+					i=mptr->ident;
+				else
+					i=mptr->dif_molec->ident;
 				ms=mptr->mstate;
 			
 				if(mptr->complex_id!=-1){ 
@@ -3492,7 +3496,7 @@ int diffuse(simptr sim) {
 				*/
 				if(!difm[i][ms]){															// isotropic diffusion
 					if(sim->interface) {
-						if(sim->interface->species==mptr->ident){	
+						if(sim->interface->species==i){	
 							if(posincompart(sim,mptr->pos,sim->interface->cmpt)){ 
 								for(d=0;d<dim;d++)
 									mptr->prev_pos[d]=mptr->pos[d];

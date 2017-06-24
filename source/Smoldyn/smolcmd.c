@@ -779,25 +779,30 @@ enum CMDcode cmdmolstatecountincmpt(simptr sim,cmdptr cmd,char *line2) {
 	for(i=0;i<sim->mols->spsites_num[s];i++)
 		nstates*=2;
 
+
 	if(cmd->i1!=nspecies) {														// allocate counter if required
 		cmdv1free(cmd);
 		cmd->i1=nspecies;
 		cmd->freefn=&cmdv1free;
 		//cmd->v1=calloc(nspecies,sizeof(int));
 		cmd->v1=calloc(nstates,sizeof(int));
+		printf("sim->time=%f nstates=%d &cmd->v1=%d\n",sim->time,nstates,&(cmd->v1));
 		if(!cmd->v1) {cmd->i1=-1;return CMDwarn;} }
 	
 	ct=(int*)cmd->v1;
 	for(i=0;i<nstates;i++) ct[i]=0;
+	
 	for(ll=0;ll<sim->mols->nlist;ll++){
-	//	if(sim->mols->live[ll][0]->ident!=s) continue;
 		for(m=0;m<sim->mols->nl[ll];m++) {
 			mptr=sim->mols->live[ll][m];
-			if(mptr->ident==s && posincompart(sim,mptr->pos,cmpt)) 
+			if(mptr->ident==s && mptr->sites_val>=0 && posincompart(sim,mptr->pos,cmpt)){ 
 				ct[mptr->sites_val]++;
+				//printf("nstates=%d, mptr->sitse_val=%d\n",nstates,mptr->sites_val);
 			}
+		}
 	}
 	scmdfprintf(cmd->cmds,fptr,"%g",sim->time);
+
 	for(i=0;i<nstates;i++) scmdfprintf(cmd->cmds,fptr," %i",ct[i]);
 	scmdfprintf(cmd->cmds,fptr,"\n");
 	scmdflush(fptr);

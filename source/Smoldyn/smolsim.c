@@ -627,14 +627,17 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		int molec_ident;
 		double side1,side2,difc1,difc2,interface_pos;
 		compartptr cmpt_tmp;
+		char str1[STRCHAR],str2[STRCHAR];
 		
+		/*	
 		line2=strnword(line2,1);
 		sscanf(line2,"%s",cname);
 		c=stringfind(sim->cmptss->cnames,sim->cmptss->ncmpt,cname);
 		CHECKS(c>0,"incorrect compartment name");
 		cmpt_tmp=sim->cmptss->cmptlist[c];
+		*/
 
-		line2=strnword(line2,2);
+		line2=strnword(line2,1);
 		sscanf(line2,"%s",species_name);
 		molec_ident=stringfind(sim->mols->spname,sim->mols->nspecies,strtrim(species_name));
 		CHECKS(molec_ident>0,"incorrect species name");
@@ -659,8 +662,12 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		sim->interface->difc2=difc2;
 		sim->interface->pos=interface_pos;
 		sim->interface->species=molec_ident;
-		sim->interface->cmpt=cmpt_tmp;
-		printf("cname:%s side1=%f side2=%f\n", cmpt_tmp->cname, sim->interface->side1, sim->interface->side2);
+		//sim->interface->cmpt=cmpt_tmp;
+		printf("side1=%f side2=%f\n", sim->interface->side1, sim->interface->side2);
+		sprintf(str1,"%lf",sim->interface->side1);
+		sprintf(str2,"%lf",sim->interface->side2);
+		Parse_AddDefine(pfp,"side1",str1,0);
+		Parse_AddDefine(pfp,"side2",str2,0);
 
 		/*
 		// the following is done in compartsupdate() and compartupdatebox(), after boxes are setup	

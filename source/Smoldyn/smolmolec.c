@@ -1873,7 +1873,9 @@ void molssfree(molssptr mols,int maxsrf) {
 	}	
 
 	if(mols->listlookup) {
-		for(i=0;i<maxspecies;i++) free(mols->listlookup[i]);
+		for(i=0;i<maxspecies;i++){
+			free(mols->listlookup[i]);
+		}
 		free(mols->listlookup); }
 
 	if(mols->exist) {
@@ -2738,7 +2740,7 @@ moleculeptr getnextmol_cplx(molssptr mols, int sunit, int ident) {
 		}}
 		if(sunit>1) {
 			if(mptr_tmp->s_index==0){
-				complex_tmp=complexalloc(mols->sim, mptr_cplx[s]);
+				complex_tmp=complexalloc(mols->sim, mptr_tmp);
 				if(complex_tmp){
 					complex_tmp->serno=mols->ncomplex;
 					mols->complexlist[mols->ncomplex-1]=complex_tmp;			// the first element will start from 1 if offsetting it
@@ -3117,12 +3119,12 @@ int addcompartmol_cplx(simptr sim,int num_mol,int sunit,int bind_num,int *ident,
 				mptr->dif_site=sites_val[0];
 				if(sites_val[1]>0){ 
 					mptr->sites[sites_val[0]]->bind=mptr;	// bind to itself;
-					sim->mols->complexlist[mptr->complex_id]->dif_molec=mptr;
-					sim->mols->complexlist[mptr->complex_id]->dif_bind_site=sites_val[0];
-					sim->mols->complexlist[mptr->complex_id]->dif_bind=mptr;
-				}
-			}
-		}
+					if(mptr->complex_id>-1){
+						sim->mols->complexlist[mptr->complex_id]->dif_molec=mptr;
+						sim->mols->complexlist[mptr->complex_id]->dif_bind_site=sites_val[0];
+						sim->mols->complexlist[mptr->complex_id]->dif_bind=mptr;
+					}
+				}}}
 		mptr_tmp=mptr;
 		sunit_i=1;
 		while(mptr_tmp->to!=NULL && mptr_tmp->s_index!=mptr_tmp->to->s_index && sunit_i<mptr->tot_sunit){
@@ -3179,6 +3181,65 @@ int addcompartmol_cplx(simptr sim,int num_mol,int sunit,int bind_num,int *ident,
 			fprintf(sim->events,"rxn_time=%f start ident=%s serno=%d sites_val=%d pos[0]=%f pos[1]=%f pos[2]=%f complex_id=%d\n", sim->time,sim->mols->spname[mptr->ident],mptr->serno,mptr->sites_val,mptr->pos[0],mptr->pos[1],mptr->pos[2],mptr->complex_id);		
 		}
 	}	
+	molsetexist(sim,ident[0],MSsoln,1);
+	if(bind_num>1)	molsetexist(sim,ident[1],MSsoln,1);
+	if(ident) free(ident);
+	if(sites_val) free(sites_val); 	// alllocated in readmolname_cplx
+
+	return 0; }
+
+int updatecompartmol_cplx(simptr sim,int serno, int bind_num,int *ident,int *sites_val,compartptr cmpt){
+	int d,dim,m,k,er;
+	moleculeptr mptr, mptr_tmp, mptr_bound;
+	int sunit_i;
+
+	if(cmpt->npts==0 && cmpt->ncmptl==0) return 2;
+	dim=sim->dim;
+	m=sim->mols->maxd-serno;
+	mptr=sim->mols->dead[m];
+	if(!mptr) return 3;
+	if(bind_num==1 && sites_val!=NULL) {
+		mptr->sites[sites_val[0]]->value[0]=1;		// phosphorylation or actin binding set to 1	
+		if(sites_val[1]>0)
+			mptr->bind_id=sites_val[1];
+		if(mptr->sites[sites_val[0]]->site_type==0){
+			mptr->dif_site=sites_val[0];
+			if(sites_val[1]>0){ 
+				mptr->sites[sites_val[0]]->bind=mptr;	// bind to itself;
+				sim->mols->complexlist[mptr->complex_id]->dif_molec=mptr;
+				sim->mols->complexlist[mptr->complex_id]->dif_bind_site=sites_val[0];
+				sim->mols->complexlist[mptr->complex_id]->dif_bind=mptr;
+			}
+		}
+	}	
+	
+	if(bind_num>1){
+		if(!sites_val) return 4;											// no binding sites information
+		mptr_bound=getnextmol_cplx(sim->mols,1,ident[1]);
+		if(!mptr_bound) return 3;
+		mptr_bound->mstate=MSsoln;
+		mptr_bound->list=sim->mols->listlookup[ident[1]][MSsoln];
+		mptr_bound->pos=mptr->pos;
+		for(d=0;d<dim;d++)  mptr_bound->pos_tmp[d]=mptr_bound->pos[d];
+		for(d=0;d<dim;d++) mptr_bound->posx[d]=mptr_bound->prev_pos[d]=mptr_bound->pos[d];
+		if(sim->boxs && sim->boxs->nbox) mptr_bound->box=mptr->box;	
+		else mptr_bound->box=NULL;
+		
+		mptr->sites[sites_val[0]]->value[0]=1;
+		mptr_bound->sites[sites_val[1]]->value[0]=1;
+		mptr->sites[sites_val[0]]->bind=mptr_bound;
+		mptr_bound->sites[sites_val[1]]->bind=mptr;
+		mptr_bound->dif_molec=mptr;
+		mptr_bound->sites_val=molecsites_state(sim->mols,mptr_bound);	
+		if(sim->events){
+			fprintf(sim->events,"rxn_time=%f start bound_ident=%s bound_serno=%d sites_val=%d pos[0]=%f pos[1]=%f pos[2]=%f complex_id=%d\n", sim->time,sim->mols->spname[mptr_bound->ident],mptr_bound->serno,mptr_bound->sites_val,mptr_bound->pos[0],mptr_bound->pos[1],mptr_bound->pos[2], mptr_bound->complex_id);
+		}
+	}
+	mptr->sites_val=molecsites_state(sim->mols,mptr);
+	if(sim->events){
+		fprintf(sim->events,"rxn_time=%f start ident=%s serno=%d sites_val=%d pos[0]=%f pos[1]=%f pos[2]=%f complex_id=%d\n", sim->time,sim->mols->spname[mptr->ident],mptr->serno,mptr->sites_val,mptr->pos[0],mptr->pos[1],mptr->pos[2],mptr->complex_id);		
+	}
+		
 	molsetexist(sim,ident[0],MSsoln,1);
 	if(bind_num>1)	molsetexist(sim,ident[1],MSsoln,1);
 	if(ident) free(ident);

@@ -4424,8 +4424,8 @@ int checksurfaces(simptr sim,int ll, int reborn){
 		mptr=mlist[m];
 		dif_bind=dif_molec=NULL;
 		result=0;
-		//m_next=m+mptr->tot_sunit;
-		m_next=m+1;
+		m_next=m+mptr->tot_sunit;
+		//m_next=m+;
 		
 		if(sim->mols->difc[mptr->ident][mptr->mstate]==0){
 			m=m_next;

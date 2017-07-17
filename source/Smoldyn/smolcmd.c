@@ -786,7 +786,6 @@ enum CMDcode cmdmolstatecountincmpt(simptr sim,cmdptr cmd,char *line2) {
 		cmd->freefn=&cmdv1free;
 		//cmd->v1=calloc(nspecies,sizeof(int));
 		cmd->v1=calloc(nstates,sizeof(int));
-		printf("sim->time=%f nstates=%d &cmd->v1=%d\n",sim->time,nstates,&(cmd->v1));
 		if(!cmd->v1) {cmd->i1=-1;return CMDwarn;} }
 	
 	ct=(int*)cmd->v1;

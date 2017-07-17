@@ -107,6 +107,7 @@ moleculeptr getnextmol_cplx(molssptr mols, int sunit, int ident);
 int addmol_cplx(simptr sim,int nmol,int sunit,int bind_num,int *ident,int *sites,double *poslo,double *poshi,int sort,int ident_free, int sites_free);
 int addsurfmol_cplx(simptr sim,int nmol,int sunit,int bind_num,int *ident,int *sites,enum MolecState ms,double *pos,panelptr pnl,int surface,enum PanelShape ps,char *pname);
 int addcompartmol_cplx(simptr sim,int nmol,int sunit,int bind_num,int *ident,int *sites,compartptr cmpt);
+int updatecompartmol_cplx(simptr sim,int serno,int bind_num,int *ident,int *sites,compartptr cmpt);
 
 moleculeptr getnextmol(molssptr mols);
 int addmol(simptr sim,int nmol,int ident,double *poslo,double *poshi,int sort);

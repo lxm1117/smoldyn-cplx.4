@@ -1,4 +1,4 @@
-/* Steven Andrews, started 10/22/2001.
+/*Steven Andrews, started 10/22/2001.
  This is a library of functions for the Smoldyn program.
  See documentation called Smoldyn_doc1.pdf and Smoldyn_doc2.pdf, and the Smoldyn
  website, which is at www.smoldyn.org.
@@ -40,7 +40,6 @@ int VCellDefined=0;
 /******************************************************************************/
 /***************************** Simulation structure ***************************/
 /******************************************************************************/
-
 
 /******************************************************************************/
 /****************************** Local declarations ****************************/
@@ -479,7 +478,7 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 	filamentptr fil;
 	long int li1;
 	listptrli lilist;
-	int num_mol; //equivalent to nmol, basically the second column of "mol 2 1 a 0 0 0", just not to confuse with other parts of the program;
+	int num_mol, serno; //equivalent to nmol, basically the second column of "mol 2 1 a 0 0 0", just not to confuse with other parts of the program;
 	rct_mptr rct1, rct2;
 	prd_mptr prd1, prd2;
 	int *ident, *sites;
@@ -622,20 +621,21 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 			line2=strnword(line2,2);
 		}
 	}
-
-	else if(!strcmp(word,"interface_layer")){
-		int molec_ident;
-		double side1,side2,difc1,difc2,interface_pos;
+	else if(!strcmp(word,"interface_cmpt")){
 		compartptr cmpt_tmp;
-		char str1[STRCHAR],str2[STRCHAR];
 		
-		/*	
+		CHECKS(sim->interface!=NULL,"invalid interface");
 		line2=strnword(line2,1);
 		sscanf(line2,"%s",cname);
 		c=stringfind(sim->cmptss->cnames,sim->cmptss->ncmpt,cname);
 		CHECKS(c>0,"incorrect compartment name");
 		cmpt_tmp=sim->cmptss->cmptlist[c];
-		*/
+		sim->interface->cmpt=cmpt_tmp;
+	}
+	else if(!strcmp(word,"interface_layer")){
+		int molec_ident;
+		double side1,side2,difc1,difc2,interface_pos;
+		char str1[STRCHAR],str2[STRCHAR];
 
 		line2=strnword(line2,1);
 		sscanf(line2,"%s",species_name);
@@ -668,19 +668,6 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 		sprintf(str2,"%lf",sim->interface->side2);
 		Parse_AddDefine(pfp,"side1",str1,0);
 		Parse_AddDefine(pfp,"side2",str2,0);
-
-		/*
-		// the following is done in compartsupdate() and compartupdatebox(), after boxes are setup	
-		for(i=0;i<cmpt_tmp->nbox;i++){
-			box_tmp=cmpt_tmp->boxlist[i];
-			if(!box_tmp->difadj)
-				box_tmp->difadj=(double*) calloc(sim->mols->nspecies,sizeof(double));
-			for(j=0;j<sim->mols->nspecies;j++)
-				box_tmp->difadj[j]=1;
-			box_tmp->difadj[molec_ident]=adj_factor;	
-		}
-		*/
-		
 	}
 	else if(!strcmp(word,"max_mol")) {						// max_mol
 		itct=sscanf(line2,"%i",&i1);
@@ -878,6 +865,32 @@ int simreadstring(simptr sim,ParseFilePtr pfp,const char *word,char *line2) {
 
 		//	er=addcompartmol(sim,nmol,i,sim->cmptss->cmptlist[c]);
 		er=addcompartmol_cplx(sim,num_mol,sunit,i,ident,sites,sim->cmptss->cmptlist[c]);
+		CHECKS(er!=2,"compartment volume is zero or nearly zero");
+		CHECKS(er!=3,"not enough molecules permitted by max_mol");
+		CHECKS(!strnword(line2,2),"unexpected text following compartment_mol"); }
+
+else if(!strcmp(word,"compartment_update")) {		// compartment_mol
+		CHECKS(sim->mols,"need to enter species before compartment_update");
+		CHECKS(sim->cmptss,"compartments need to be defined before compartment_update statement");
+		CHECKS(sim->cmptss->ncmpt>0,"at least one compartment needs to be defined before compartment_mol");
+		// assuming s_unit=1
+		itct=sscanf(line2,"%d %s",&serno,nm);
+		c=stringfind(sim->cmptss->cnames,sim->cmptss->ncmpt,nm);
+		CHECKS(c>=0,"compartment name is not recognized");
+		line2=strnword(line2,3);
+
+		// CHECKS(itct==1,"compartment_mol format: nmol species compartment");
+		CHECKS(nmol>=0,"the number of molecules needs to be at least 0");
+		// CHECKS(line2=strnword(line2,2),"compartment_mol format: nmol species compartment");
+		
+		i=readmolname_cplx(sim,line2,&ident,&sites);	// ms has to be MSsoln
+		// CHECKS(i!=0,"empty molecules not permitted");
+		CHECKS(i!=-1,"error reading molecule name");
+		CHECKS(i!=-2,"wrong sites information");
+		// CHECKS(ms==MSsoln,"state needs to be solution");
+
+		//	er=addcompartmol(sim,nmol,i,sim->cmptss->cmptlist[c]);
+		er=updatecompartmol_cplx(sim,serno,i,ident,sites,sim->cmptss->cmptlist[c]);
 		CHECKS(er!=2,"compartment volume is zero or nearly zero");
 		CHECKS(er!=3,"not enough molecules permitted by max_mol");
 		CHECKS(!strnword(line2,2),"unexpected text following compartment_mol"); }
@@ -1968,11 +1981,6 @@ int simulatetimestep(simptr sim) {
 
 	int m;
 	moleculeptr mptr;
-	for(m=0;m<sim->mols->nl[0];m++){
-		mptr=sim->mols->live[0][m];
-		if(sim->events) {
-			fprintf(sim->events,"sim.c time=%f m=%d serno=%d prev_pos[0]=%f prev_pos[1]=%f prev_pos[2]=%f pos[0]=%f pos[1]=%f pos[2]=%f\n", sim->time,m,mptr->serno,mptr->prev_pos[0],mptr->prev_pos[1],mptr->prev_pos[2],mptr->pos[0],mptr->pos[1],mptr->pos[2]);
-	}}
 	sim->time+=sim->dt;										// --- end of time step ---
 	er=simdocommands(sim);
 	if(er) return er;

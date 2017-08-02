@@ -1,0 +1,58 @@
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘double surfacearea2(simptr, int, PanelShape, char*, int*)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:401:12: warning: variable ‘dim’ set but not used [-Wunused-but-set-variable]
+  int panel,dim,totpanel;
+            ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘surfacestruct* surfreadstring(simptr, ParseFilePtr, surfaceptr, const char*, char*)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:2598:34: warning: unused variable ‘s’ [-Wunused-variable]
+  int dim,i,p,p2,i1,i2,i3,itct,er,s;
+                                  ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:2608:7: warning: unused variable ‘ident’ [-Wunused-variable]
+  int *ident,*sites;
+       ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:2608:14: warning: unused variable ‘sites’ [-Wunused-variable]
+  int *ident,*sites;
+              ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int surfupdateparams(simptr)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:3017:9: warning: variable ‘dt’ set but not used [-Wunused-but-set-variable]
+  double dt,**difc,sum,**difstep;
+         ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:3017:14: warning: variable ‘difc’ set but not used [-Wunused-but-set-variable]
+  double dt,**difc,sum,**difstep;
+              ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:3017:25: warning: variable ‘difstep’ set but not used [-Wunused-but-set-variable]
+  double dt,**difc,sum,**difstep;
+                         ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int lineXpanel(double*, double*, panelptr, int, double*, PanelFace*, PanelFace*, double*, double*, int*)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:3235:13: warning: variable ‘srf’ set but not used [-Wunused-but-set-variable]
+  surfaceptr srf;
+             ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int ptinpanel(double*, panelptr, int)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:3518:13: warning: variable ‘srf’ set but not used [-Wunused-but-set-variable]
+  surfaceptr srf;
+             ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int rotating_jump(moleculeptr, panelptr, double*, PanelFace, int)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4137:30: warning: variable ‘front1’ set but not used [-Wunused-but-set-variable]
+  double **point1, **point2, *front1,*front2, dot; 
+                              ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4137:38: warning: variable ‘front2’ set but not used [-Wunused-but-set-variable]
+  double **point1, **point2, *front1,*front2, dot; 
+                                      ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4137:46: warning: unused variable ‘dot’ [-Wunused-variable]
+  double **point1, **point2, *front1,*front2, dot; 
+                                              ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int dosurfinteract(simptr, moleculeptr, int, int, panelptr, PanelFace, double*, int*)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4215:6: warning: unused variable ‘cmptcheck’ [-Wunused-variable]
+  int cmptcheck;
+      ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int checksurfaces_cplx(simptr, moleculeptr, int, int, int)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4573:58: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   if(complex_pos(sim,mptr,"pos_surfline4570",pos_offset,1)==-1){
+                                                          ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int rotating_jump(moleculeptr, panelptr, double*, PanelFace, int)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4201:26: warning: ‘dir’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   dir*=(face!=face2)?1:-1;
+                          ^
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c: In function ‘int checksurfacebound(simptr, int)’:
+/home/neuro/Downloads/smoldyn-cplx.4/source/Smoldyn/smolsurface.c:4298:33: warning: array subscript is above array bounds [-Warray-bounds]
+   mptr->list=pnl->srf->port[face]->llport;
+                                 ^

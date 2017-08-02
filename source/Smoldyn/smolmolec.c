@@ -3525,10 +3525,12 @@ int diffuse(simptr sim) {
 				updated_flag=0;
 				mptr=mlist[m];
 					
-				if(mptr->pos==mptr->pos_tmp)
-					i=mptr->ident;
-				else
+				if(mptr->bind_id>=0 && mptr->bind_id!=mptr->ident)
+					i=mptr->bind_id;	
+				else if (mptr->pos!=mptr->pos_tmp)
 					i=mptr->dif_molec->ident;
+				else 
+					i=mptr->ident;
 				ms=mptr->mstate;
 			
 				if(mptr->complex_id!=-1){ 

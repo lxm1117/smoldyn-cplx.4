@@ -2444,8 +2444,8 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 		dc1=mols->difc[i1][dif_molec1->mstate];
 		i2=difmolec(sim, mptr2,&dif_molec2);
 		dc2=mols->difc[i2][dif_molec2->mstate];
-		if(sim->events)
-			fprintf(sim->events,"\nmptr1->serno=%d mptr2->serno=%d dif_molec1->serno=%d pos[2]=%f dif_molec2->serno=%d pos[2]=%f dc1=%f dc2=%f\n", mptr1->serno, mptr2->serno, dif_molec1->serno, dif_molec1->pos[2],dif_molec2->serno, dif_molec2->pos[2],dc1,dc2);
+		//if(sim->events)
+		//	fprintf(sim->events,"\nmptr1->serno=%d mptr2->serno=%d dif_molec1->serno=%d pos[2]=%f dif_molec2->serno=%d pos[2]=%f dc1=%f dc2=%f\n", mptr1->serno, mptr2->serno, dif_molec1->serno, dif_molec1->pos[2],dif_molec2->serno, dif_molec2->pos[2],dc1,dc2);
 		if(dc1==0 && dc2==0) x=0.5;
 		else x=dc2/(dc1+dc2);
 
@@ -2620,30 +2620,31 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 		if(sim->events) {
 			if(molec_gen==1){
 				fprintf(sim->events, "rxn_time=%f start ident=%s serno=%d \n", sim->time, mols->spname[mptr2->ident], mptr2->serno);
-				fprintf(sim->events, "time=%f %s prob=%f dsum=%f order=%d ident1=%s ident2=%s mptr1->serno=%d mptr1->complex_id=%d mptr2->serno=%d mptr2->complex_id=%d\n", sim->time, rxn->rname, rxn->prob, dc1+dc2, rxn->order, mols->spname[mptr1->ident], mols->spname[mptr2->ident], mptr1->serno, mptr1->complex_id, mptr2->serno, mptr2->complex_id);
+				//fprintf(sim->events, "time=%f %s prob=%f dsum=%f order=%d ident1=%s ident2=%s mptr1->serno=%d mptr1->complex_id=%d mptr2->serno=%d mptr2->complex_id=%d\n", sim->time, rxn->rname, rxn->prob, dc1+dc2, rxn->order, mols->spname[mptr1->ident], mols->spname[mptr2->ident], mptr1->serno, mptr1->complex_id, mptr2->serno, mptr2->complex_id);
 			}
 			else if(molec_gen==0){
 				fprintf(sim->events, "rxn_time=%f %s unbindrad=%f prob=%f dsum=%f order=%d ident1=%s ident2=%s rxn_site1=%d rxn_site2=%d mptr1->serno=%d mptr1->complex_id=%d mptr2->serno=%d mptr2->complex_id=%d\n", sim->time, rxn->rname, r, rxn->prob,dc1+dc2,order, mols->spname[mptr1->ident], mols->spname[mptr2->ident], rxn_site_indx1, rxn_site_indx2, mptr1->serno, mptr1->complex_id,mptr2->serno,mptr2->complex_id);
 			}
 	
-			fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", mols->spname[mptr1->ident], mptr1->serno, mptr1->pos[0],mptr1->pos[1],mptr1->pos[2]);
-			fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", mols->spname[mptr2->ident], mptr2->serno, mptr2->pos[0],mptr2->pos[1],mptr2->pos[2]);
-			for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++){
-				if(mptr1->sites[k]->bind){ 
-					fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
-			}}
-			fprintf(sim->events,"\n");
-			for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++){
-				if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);
-			}
+			//fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", mols->spname[mptr1->ident], mptr1->serno, mptr1->pos[0],mptr1->pos[1],mptr1->pos[2]);
+			//fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", mols->spname[mptr2->ident], mptr2->serno, mptr2->pos[0],mptr2->pos[1],mptr2->pos[2]);
+			//for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++){
+			//	if(mptr1->sites[k]->bind){ 
+			//		fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
+			//}
+			//}
+			//fprintf(sim->events,"\n");
+			//for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++){
+			//	if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);
+			//}
 			fprintf(sim->events,"\n");
 		}	
 		if(molec_gen>0 && mptr1->vchannel!=NULL){
 			if(mptr1->vchannel->molec_gen>1){
 				for(i=0;i<mptr1->vchannel->molec_gen;i++){
 					mptr_tmp=getnextmol_cplx(mols,1,mptr2->ident);
-					if(sim->events)
-						fprintf(sim->events,"molec_gen rxn_time=%f mptr->serno=%d\n",sim->time, mptr_tmp->serno);
+					//if(sim->events)
+					//	fprintf(sim->events,"molec_gen rxn_time=%f mptr->serno=%d\n",sim->time, mptr_tmp->serno);
 					mptr_tmp->list=sim->mols->listlookup[mptr2->ident][mptr2->mstate];
 					mptr_tmp->box=mptr2->box;
 					mptr_tmp->mstate=mptr2->mstate;
@@ -2668,10 +2669,10 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 				}
 				if(sim->events){ 
 					fprintf(sim->events, "rxn_time=%f %s order=%d ident1=%s mptr1->serno=%d %s\n", sim->time, rxn->rname, order, mols->spname[mptr1->ident], mptr1->serno, mols->spname[mptr1->ident]);
-					fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr1->serno, mptr1->pos[0], mptr1->pos[1], mptr1->pos[2]);
-					for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++)
-						if(mptr1->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
-					fprintf(sim->events, "\n");
+					//fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr1->serno, mptr1->pos[0], mptr1->pos[1], mptr1->pos[2]);
+					//for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++)
+					//	if(mptr1->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
+					//fprintf(sim->events, "\n");
 				}
 				if(rxn->molec_num==2){
 					for(i=0;i<rxn->prd[1]->sites_num;i++){
@@ -2680,10 +2681,10 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 					}
 					if(sim->events){ 
 						fprintf(sim->events, "%s dsum=%f order=%d ident2=%s mptr2->serno=%d %s\n", rxn->rname, dc1+dc2, order, mols->spname[mptr2->ident], mptr2->serno, mols->spname[mptr2->ident]);
-						fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr2->serno, mptr2->pos[0], mptr2->pos[1], mptr2->pos[2]);
-						for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++)
-							if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);
-						fprintf(sim->events, "\n");
+						//fprintf(sim->events, ">>> %s serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr2->serno, mptr2->pos[0], mptr2->pos[1], mptr2->pos[2]);
+						//for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++)
+						//	if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);
+						//fprintf(sim->events, "\n");
 				}}	
 		}}
 		if(new_mol==-1){						
@@ -2774,18 +2775,18 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 				if(sim->events) {
 					difmolec(sim,mptr1,&dif_molec1);
 					difmolec(sim,mptr2,&dif_molec2);
-					fprintf(sim->events,"after binding, dif_molec1->serno=%d, pos[2]=%f, dif_molec2->serno=%d, pos[2]=%f\n", dif_molec1->serno, dif_molec1->pos[2], dif_molec2->serno, dif_molec2->pos[2]);
+					//fprintf(sim->events,"after binding, dif_molec1->serno=%d, pos[2]=%f, dif_molec2->serno=%d, pos[2]=%f\n", dif_molec1->serno, dif_molec1->pos[2], dif_molec2->serno, dif_molec2->pos[2]);
 					fprintf(sim->events,"rxn_time=%f %s sqrt_bindrad2=%f dsum=%f order=%d ident1=%s ident2=%s rxn_site1=%d rxn_site2=%d mptr1->serno=%d mptr2->serno=%d mptr1->complex_id=%d mptr2->complex_id=%d mptr1->s_index=%d mptr2->s_index=%d \n", sim->time, rxn->rname, sqrt(r), dc1+dc2, order, mols->spname[mptr1->ident], mols->spname[mptr2->ident], rxn_site_indx1, rxn_site_indx2, mptr1->serno, mptr2->serno, mptr1->complex_id, mptr2->complex_id, mptr1->s_index, mptr2->s_index); 
-					fprintf(sim->events,">>> %s mptr1->serno=%d  mptr2->serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr1->serno, mptr2->serno, mptr1->pos[0], mptr1->pos[1], mptr1->pos[2]);
-					for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++) {
-						if(mptr1->sites[k]->bind) {
-							fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
-						}
-					}	
-					fprintf(sim->events,"\n");
-					for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++){
-						if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);}
-					fprintf(sim->events,"\n");
+					//fprintf(sim->events,">>> %s mptr1->serno=%d  mptr2->serno=%d pos[0]=%f pos[1]=%f pos[2]=%f\n", rxn->rname, mptr1->serno, mptr2->serno, mptr1->pos[0], mptr1->pos[1], mptr1->pos[2]);
+					//for(k=0;k<sim->mols->spsites_num[mptr1->ident];k++) {
+					//	if(mptr1->sites[k]->bind) {
+					//		fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr1->ident],mptr1->serno,k,sim->mols->spname[mptr1->sites[k]->bind->ident],mptr1->sites[k]->bind->serno);
+					//	}
+					//}	
+					//fprintf(sim->events,"\n");
+					//for(k=0;k<sim->mols->spsites_num[mptr2->ident];k++){
+					//	if(mptr2->sites[k]->bind) fprintf(sim->events,"bound: %s:%d[%d]~%s:%d ", sim->mols->spname[mptr2->ident],mptr2->serno,k,sim->mols->spname[mptr2->sites[k]->bind->ident],mptr2->sites[k]->bind->serno);}
+					//fprintf(sim->events,"\n");
 				}
 		}}
 		mptr1->sites_val=molecsites_state(sim->mols,mptr1);
@@ -2803,11 +2804,11 @@ int doreact(rxnssptr rxnss,gpointer rptr,moleculeptr mptr1,moleculeptr mptr2,int
 			}
 		}
 		if(sim->events) {
-			fprintf(sim->events, ">>> mptr1->serno=%d mptr1->sites_val=%d\n", mptr1->serno, mptr1->sites_val);
-			if(mptr2){
-				fprintf(sim->events, ">>> mptr2->serno=%d mptr2->sites_val=%d\n", mptr2->serno, mptr2->sites_val);
-			}
-			fflush(sim->events);
+			//fprintf(sim->events, ">>> mptr1->serno=%d mptr1->sites_val=%d\n", mptr1->serno, mptr1->sites_val);
+			//if(mptr2){
+			//	fprintf(sim->events, ">>> mptr2->serno=%d mptr2->sites_val=%d\n", mptr2->serno, mptr2->sites_val);
+			//}
+			//fflush(sim->events);
 		}
 		return 0; 
 	failure: 
@@ -3354,6 +3355,8 @@ void posptr_assign(molssptr mols, moleculeptr mptr, moleculeptr mptr_bind, int s
 					}
 				//}
 			}
+			else if(mptr->sites[sitecode]->bind==mptr && mptr->bind_id>0) // consider the case bK@A bind to Actin
+				mptr->bind_id=-1;
 			r=r->next;
 		}
 		// consider cav_bK_r, bKp-camN2C2 (where bK next attached to cav), Ng-camN0C0_r

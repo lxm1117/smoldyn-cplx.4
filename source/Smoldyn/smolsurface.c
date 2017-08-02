@@ -2621,7 +2621,7 @@ surfaceptr surfreadstring(simptr sim,ParseFilePtr pfp,surfaceptr srf,const char 
 		CHECKS(srf,"need to enter surface name before action");
 		CHECKS(srfss->maxspecies,"need to enter molecules before action");
 		itct=sscanf(line2,"%s %s %s",nm1,nm2,actnm);
-		printf("surf.c line 2693, line2=%s, actnm=%s\n",line2,actnm);
+		//printf("surf.c line 2693, line2=%s, actnm=%s\n",line2,actnm);
 		CHECKS(itct==3,"action format: species[(state)] face action");
 		i=readmolname(sim,nm1,&ms1,0);
 		face=surfstring2face(nm2);
@@ -4525,8 +4525,6 @@ int checksurfaces_cplx(simptr sim, moleculeptr mptr, int m, int ll,int reborn) {
 		via[d]=mptr->posx[d];
 		mptr->prev_pos[d]=mptr->pos[d];
 	}
-	if(sim->events)
-		fprintf(sim->events,"surf.c time=%f serno=%d prev_pos[0]=%f prev_pos[1]=%f prev_pos[2]=%f\n",sim->time, mptr->serno, mptr->prev_pos[0], mptr->prev_pos[1], mptr->prev_pos[2]);
 	pos=mptr->pos;
 	done=0;
 	it=0;
@@ -4567,7 +4565,7 @@ int checksurfaces_cplx(simptr sim, moleculeptr mptr, int m, int ll,int reborn) {
 		done=1; 
 	}
 	if(!boundarytest(sim,mptr->pos) && mptr->ident>0)
-		printf("time=%f ident=%d serno=%d act=%d prevpos[0]=%f prevpos[1]=%f prevpos[2]=%f\n",sim->time,mptr->ident,mptr->serno,act,mptr->prev_pos[0],mptr->prev_pos[1],mptr->prev_pos[2]);
+		printf("time=%f ident=%d serno=%d act=%d prevpos[0]=%f prevpos[1]=%f prevpos[2]=%f posx[0]=%f posx[1]=%f posx[2]=%f\n",sim->time,mptr->ident,mptr->serno,act,mptr->prev_pos[0],mptr->prev_pos[1],mptr->prev_pos[2],mptr->posx[0],mptr->posx[1],mptr->posx[2]);
 	if(mptr->tot_sunit>1  && act!=-1){	
 		for(d=0;d<dim;d++) pos_offset[d]=mptr->pos[d]-mptr->prev_pos[d];
 		if(pos_offset[0]==0 && pos_offset[1]==0 && pos_offset[2]==0) return 0;
